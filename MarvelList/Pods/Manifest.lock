@@ -1,3 +1,36 @@
-PODFILE CHECKSUM: b7c8a529f229b73ccceed3e92a60fa7e9bd8c212
+PODS:
+  - Alamofire (5.4.4)
+  - Kingfisher (7.2.3)
+  - PromiseKit (6.8.5):
+    - PromiseKit/CorePromise (= 6.8.5)
+    - PromiseKit/Foundation (= 6.8.5)
+    - PromiseKit/UIKit (= 6.8.5)
+  - PromiseKit/CorePromise (6.8.5)
+  - PromiseKit/Foundation (6.8.5):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.8.5):
+    - PromiseKit/CorePromise
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4.4)
+  - Kingfisher
+  - PromiseKit (~> 6.8.4)
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - PromiseKit
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Kingfisher: 8c2cbe0c11ea4d481542895112682a99e058468e
+  PromiseKit: 9616b0afef31eae56ab9ce044c8ec2b8612a15cd
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 9eb15c9fd74481c96d6b5df4133f99a202ca5d36
 
 COCOAPODS: 1.11.2
