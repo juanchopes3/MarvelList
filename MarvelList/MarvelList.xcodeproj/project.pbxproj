@@ -19,6 +19,14 @@
 		241CB5B02860F1B700D306E3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 241CB5AF2860F1B700D306E3 /* README.md */; };
 		241CB5B32860F2A400D306E3 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5B22860F2A400D306E3 /* CustomView.swift */; };
 		241CB5B62860F2E400D306E3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5B52860F2E400D306E3 /* UIViewController.swift */; };
+		241CB5D42860F56C00D306E3 /* MainModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5C82860F56C00D306E3 /* MainModulePresenter.swift */; };
+		241CB5D52860F56C00D306E3 /* MainModuleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5C92860F56C00D306E3 /* MainModuleModule.swift */; };
+		241CB5D62860F56C00D306E3 /* MainModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CB5CB2860F56C00D306E3 /* MainModuleViewController.xib */; };
+		241CB5D72860F56C00D306E3 /* MainModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5CC2860F56C00D306E3 /* MainModuleViewController.swift */; };
+		241CB5D82860F56C00D306E3 /* MainModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5CD2860F56C00D306E3 /* MainModuleProtocols.swift */; };
+		241CB5D92860F56C00D306E3 /* MainModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5CF2860F56C00D306E3 /* MainModuleInteractor.swift */; };
+		241CB5DA2860F56C00D306E3 /* MainModuleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5D12860F56C00D306E3 /* MainModuleEntity.swift */; };
+		241CB5DB2860F56C00D306E3 /* MainModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5D32860F56C00D306E3 /* MainModuleRouter.swift */; };
 		4002A916E605A5FB8A0FD260 /* Pods_MarvelList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572FE8AA3A239E21FEF2947F /* Pods_MarvelList.framework */; };
 		CEEFB5D28CD0D01117944029 /* Pods_MarvelList_MarvelListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA65E475519E8A5975628B /* Pods_MarvelList_MarvelListUITests.framework */; };
 		DE186B5EF696DA51C13D7CE6 /* Pods_MarvelListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73CF05DCA42DC4336D0271E /* Pods_MarvelListTests.framework */; };
@@ -60,6 +68,14 @@
 		241CB5AF2860F1B700D306E3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		241CB5B22860F2A400D306E3 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		241CB5B52860F2E400D306E3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		241CB5C82860F56C00D306E3 /* MainModulePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModulePresenter.swift; sourceTree = "<group>"; };
+		241CB5C92860F56C00D306E3 /* MainModuleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleModule.swift; sourceTree = "<group>"; };
+		241CB5CB2860F56C00D306E3 /* MainModuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainModuleViewController.xib; sourceTree = "<group>"; };
+		241CB5CC2860F56C00D306E3 /* MainModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleViewController.swift; sourceTree = "<group>"; };
+		241CB5CD2860F56C00D306E3 /* MainModuleProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleProtocols.swift; sourceTree = "<group>"; };
+		241CB5CF2860F56C00D306E3 /* MainModuleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleInteractor.swift; sourceTree = "<group>"; };
+		241CB5D12860F56C00D306E3 /* MainModuleEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleEntity.swift; sourceTree = "<group>"; };
+		241CB5D32860F56C00D306E3 /* MainModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModuleRouter.swift; sourceTree = "<group>"; };
 		2726472C3C20C521F4E997E4 /* Pods-MarvelList-MarvelListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelList-MarvelListUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelList-MarvelListUITests/Pods-MarvelList-MarvelListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		572FE8AA3A239E21FEF2947F /* Pods_MarvelList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA65E475519E8A5975628B /* Pods_MarvelList_MarvelListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelList_MarvelListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +152,7 @@
 		241CB57E2860F0BF00D306E3 /* MarvelList */ = {
 			isa = PBXGroup;
 			children = (
+				241CB5C62860F56C00D306E3 /* Main */,
 				241CB5B42860F2CA00D306E3 /* Extensions */,
 				241CB5B12860F28F00D306E3 /* Utils */,
 				241CB57F2860F0BF00D306E3 /* AppDelegate.swift */,
@@ -180,6 +197,61 @@
 				241CB5B52860F2E400D306E3 /* UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		241CB5C62860F56C00D306E3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				241CB5C72860F56C00D306E3 /* Presenter */,
+				241CB5C92860F56C00D306E3 /* MainModuleModule.swift */,
+				241CB5CA2860F56C00D306E3 /* View */,
+				241CB5CD2860F56C00D306E3 /* MainModuleProtocols.swift */,
+				241CB5CE2860F56C00D306E3 /* Interactor */,
+				241CB5D02860F56C00D306E3 /* Entities */,
+				241CB5D22860F56C00D306E3 /* Router */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		241CB5C72860F56C00D306E3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				241CB5C82860F56C00D306E3 /* MainModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		241CB5CA2860F56C00D306E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				241CB5CB2860F56C00D306E3 /* MainModuleViewController.xib */,
+				241CB5CC2860F56C00D306E3 /* MainModuleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		241CB5CE2860F56C00D306E3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				241CB5CF2860F56C00D306E3 /* MainModuleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		241CB5D02860F56C00D306E3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				241CB5D12860F56C00D306E3 /* MainModuleEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		241CB5D22860F56C00D306E3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				241CB5D32860F56C00D306E3 /* MainModuleRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		E6F7E0DE5339C096D875E090 /* Frameworks */ = {
@@ -305,6 +377,7 @@
 				241CB5892860F0C000D306E3 /* Assets.xcassets in Resources */,
 				241CB5B02860F1B700D306E3 /* README.md in Resources */,
 				241CB5872860F0BF00D306E3 /* Main.storyboard in Resources */,
+				241CB5D62860F56C00D306E3 /* MainModuleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +506,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				241CB5842860F0BF00D306E3 /* ViewController.swift in Sources */,
+				241CB5DB2860F56C00D306E3 /* MainModuleRouter.swift in Sources */,
+				241CB5D82860F56C00D306E3 /* MainModuleProtocols.swift in Sources */,
+				241CB5D42860F56C00D306E3 /* MainModulePresenter.swift in Sources */,
+				241CB5D92860F56C00D306E3 /* MainModuleInteractor.swift in Sources */,
+				241CB5D52860F56C00D306E3 /* MainModuleModule.swift in Sources */,
+				241CB5D72860F56C00D306E3 /* MainModuleViewController.swift in Sources */,
 				241CB5B32860F2A400D306E3 /* CustomView.swift in Sources */,
 				241CB5802860F0BF00D306E3 /* AppDelegate.swift in Sources */,
 				241CB5822860F0BF00D306E3 /* SceneDelegate.swift in Sources */,
 				241CB5B62860F2E400D306E3 /* UIViewController.swift in Sources */,
+				241CB5DA2860F56C00D306E3 /* MainModuleEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
