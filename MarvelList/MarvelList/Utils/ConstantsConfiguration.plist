@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PUBLIC_KEY</key>
+	<string>2c236a8d709dc4df0d2b7dfb5aaf0f0e</string>
+	<key>PRIVATE_KEY</key>
+	<string>4889843acbe5ad9a43e2c142780572f0b10035de</string>
+	<key>PATH_CHARACTERS</key>
+	<string>/v1/public/characters</string>
+	<key>URL_BASE</key>
+	<string>https://gateway.marvel.com</string>
+</dict>
+</plist>
