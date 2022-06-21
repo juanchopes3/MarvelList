@@ -20,12 +20,12 @@ public protocol ApiRouteable: Routeable {
 extension ApiRouteable {
     
     var baseUrl: String {
-        return "https://gateway.marvel.com"
+        return  String.getConfigurartionValue(forKey: .urlBase)
     }
     
     var path: String {
         
-        return "/v1/public/characters"
+        return   String.getConfigurartionValue(forKey: .pathCharacters)
     }
     
     var method: HTTPMethod {
@@ -41,8 +41,10 @@ extension ApiRouteable {
         let ts = String(Date().timeIntervalSince1970)
         let urlParams = [
           "ts" : ts,
-          "hash" : MD5(string: ts + "4889843acbe5ad9a43e2c142780572f0b10035de" + "2c236a8d709dc4df0d2b7dfb5aaf0f0e"),
-          "apikey" : "2c236a8d709dc4df0d2b7dfb5aaf0f0e"]
+          "hash" : MD5(string: ts + String.getConfigurartionValue(forKey: .privateKey) + String.getConfigurartionValue(forKey: .publicKey)),
+          "apikey" : String.getConfigurartionValue(forKey: .publicKey),
+          "limit" : "50"
+        ]
         return urlParams
     }
     

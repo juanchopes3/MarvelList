@@ -24,6 +24,8 @@
 		240DAF8628614A13007A93CB /* Routeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF8528614A13007A93CB /* Routeable.swift */; };
 		240DAF8828614A2D007A93CB /* Mappeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF8728614A2D007A93CB /* Mappeable.swift */; };
 		240DAF8A28614AD9007A93CB /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF8928614AD9007A93CB /* MD5.swift */; };
+		240DAF8F28620A23007A93CB /* ConstantsConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 240DAF8E28620A23007A93CB /* ConstantsConfiguration.plist */; };
+		240DAF9128620CED007A93CB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF9028620CED007A93CB /* Configuration.swift */; };
 		241CB5802860F0BF00D306E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB57F2860F0BF00D306E3 /* AppDelegate.swift */; };
 		241CB5822860F0BF00D306E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5812860F0BF00D306E3 /* SceneDelegate.swift */; };
 		241CB5842860F0BF00D306E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5832860F0BF00D306E3 /* ViewController.swift */; };
@@ -87,6 +89,8 @@
 		240DAF8528614A13007A93CB /* Routeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routeable.swift; sourceTree = "<group>"; };
 		240DAF8728614A2D007A93CB /* Mappeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappeable.swift; sourceTree = "<group>"; };
 		240DAF8928614AD9007A93CB /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		240DAF8E28620A23007A93CB /* ConstantsConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ConstantsConfiguration.plist; sourceTree = "<group>"; };
+		240DAF9028620CED007A93CB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		241CB57C2860F0BF00D306E3 /* MarvelList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		241CB57F2860F0BF00D306E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		241CB5812860F0BF00D306E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 				240DAF8528614A13007A93CB /* Routeable.swift */,
 				240DAF8728614A2D007A93CB /* Mappeable.swift */,
 				240DAF8928614AD9007A93CB /* MD5.swift */,
+				240DAF8E28620A23007A93CB /* ConstantsConfiguration.plist */,
+				240DAF9028620CED007A93CB /* Configuration.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -452,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				241CB58C2860F0C000D306E3 /* LaunchScreen.storyboard in Resources */,
+				240DAF8F28620A23007A93CB /* ConstantsConfiguration.plist in Resources */,
 				240DAF6B28613265007A93CB /* MainCollectionViewCell.xib in Resources */,
 				241CB5892860F0C000D306E3 /* Assets.xcassets in Resources */,
 				241CB5B02860F1B700D306E3 /* README.md in Resources */,
@@ -590,6 +597,7 @@
 				241CB5DB2860F56C00D306E3 /* MainModuleRouter.swift in Sources */,
 				241CB5D82860F56C00D306E3 /* MainModuleProtocols.swift in Sources */,
 				240DAF7728614369007A93CB /* Events.swift in Sources */,
+				240DAF9128620CED007A93CB /* Configuration.swift in Sources */,
 				240DAF732861431E007A93CB /* Items.swift in Sources */,
 				240DAF7928614457007A93CB /* Series.swift in Sources */,
 				240DAF842861496F007A93CB /* ApiRouter.swift in Sources */,
