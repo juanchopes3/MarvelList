@@ -10,11 +10,11 @@ import PromiseKit
 
 protocol ApiDataLoaderProtocol {
     typealias Result = Swift.Result<[MainModuleModel], Error>
-    //typealias Detail = Swift.Result<DetailModel, Error>
+    typealias Detail = Swift.Result<MainModuleModel, Error>
     
     func getList(completion: @escaping (Result) -> Void)
     func getSearch(value: String, completion: @escaping (Result) -> Void)
-    //func getDetail(id: Int, completion: @escaping (Detail) -> Void)
+    func getDetail(id: Int, completion: @escaping (Detail) -> Void)
 }
 
 final class ApiDataLoaderPromise: ApiDataLoaderProtocol {
@@ -45,5 +45,16 @@ final class ApiDataLoaderPromise: ApiDataLoaderProtocol {
             completion(.failure(error))
         }
 
+    }
+    
+    func getDetail(id: Int, completion: @escaping (ApiDataLoaderProtocol.Detail) -> Void) {
+        
+        firstly{
+            api.getDetail(id: id)
+        }.done { resultData in
+            completion(.success(resultData))
+        }.catch { (error) in
+            completion(.failure(error))
+        }
     }
 }

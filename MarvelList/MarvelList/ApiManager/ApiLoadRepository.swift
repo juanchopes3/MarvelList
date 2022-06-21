@@ -13,6 +13,7 @@ import Alamofire
 protocol ApiLoadRepositoryProtocol {
     func getListData() -> Promise<[MainModuleModel]>
     func getlistSearch(value: String) -> Promise<[MainModuleModel]>
+    func getDetail(id: Int) -> Promise<MainModuleModel>
 }
 
 
@@ -29,11 +30,16 @@ public class ApiLoadRepository: ApiLoadRepositoryProtocol {
         let router = apiflowManager.apiData(route: .getSearch(value))
         return request(router)
     }
+    
+    func getDetail(id: Int) -> Promise<MainModuleModel> {
+        let router = apiflowManager.apiData(route: .getDetail(id))
+        return request(router, isDetail: true)
+    }
 }
 
 
 public func request<T>(_ router: Routeable,
-                       body: [String: String]? = nil) -> Promise<T> {
+                       body: [String: String]? = nil, isDetail: Bool? = false) -> Promise<T> {
     
     guard let request = try? router.asUrlRequest() else {
         return Promise.init(error: AFError.explicitlyCancelled)
@@ -46,10 +52,18 @@ public func request<T>(_ router: Routeable,
                 
                 switch responseData.result{
                 case .success:
-                    decodeData(dataResponse: responseData.data) { (result) in
-                        seal.fulfill(result as! T)
+                    if isDetail ?? false  {
+                        getData(dataResponse: responseData.data) { (result) in
+                            seal.fulfill(result as! T)
+                        }
+                        
+                    }else {
+                        decodeData(dataResponse: responseData.data) { (result) in
+                            seal.fulfill(result as! T)
+                        }
+                        
                     }
-
+                    
                 case .failure(let error):
                     print(error)
                 }
@@ -60,15 +74,10 @@ public func request<T>(_ router: Routeable,
 private func decodeData(dataResponse: Data?,
                         completion: @escaping(_ result: [MainModuleModel]?) -> Void)  {
     
-    guard let dataResponse = dataResponse else { return completion(nil) }
-    let json = try? JSONSerialization.jsonObject(with: dataResponse, options: [])
-    guard let data: [String : Any] = json as? [String : Any],
-          let dataDict: [String : Any] = data["data"] as? [String : Any],
-          let resultsArray: [[String : Any]] = dataDict["results"] as? [[String : Any]] else {
-              return completion(nil)
-          }
+    guard let results = decodeDataResults(data: dataResponse) else { return completion(nil) }
     var itmes: [MainModuleModel] = []
-    for item in resultsArray {
+    
+    for item in results {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: item,
                                                       options: .prettyPrinted)
@@ -80,4 +89,35 @@ private func decodeData(dataResponse: Data?,
     }
     completion(itmes)
     
+}
+
+private func getData(dataResponse: Data?,
+                     completion: @escaping(_ result: MainModuleModel?) -> Void) {
+    
+    guard let results = decodeDataResults(data: dataResponse) else { return completion(nil) }
+    var items: MainModuleModel?
+    
+    for item in results {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: item,
+                                                      options: .prettyPrinted)
+            let item = try JSONDecoder().decode(MainModuleModel.self, from: jsonData)
+            items = item
+        } catch ( let error ) {
+            print(error.localizedDescription)
+        }
+    }
+    completion (items)
+}
+
+private func decodeDataResults(data: Data?) -> [[String: Any]]? {
+    guard let dataResponse = data else { return [[:]] }
+    let json = try? JSONSerialization.jsonObject(with: dataResponse, options: [])
+    guard let data: [String : Any] = json as? [String : Any],
+          let dataDict: [String : Any] = data["data"] as? [String : Any],
+          let resultsArray: [[String : Any]] = dataDict["results"] as? [[String : Any]] else {
+              return [[:]]
+          }
+    
+    return resultsArray
 }

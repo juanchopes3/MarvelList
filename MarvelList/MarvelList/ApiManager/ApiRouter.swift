@@ -24,8 +24,12 @@ extension ApiRouteable {
     }
     
     var path: String {
-        
-        return   String.getConfigurartionValue(forKey: .pathCharacters)
+        switch route {
+        case .getDetail(let id):
+            return String.getConfigurartionValue(forKey: .pathCharacters) + "/" +  String(id)
+        default:
+            return   String.getConfigurartionValue(forKey: .pathCharacters)
+        }
     }
     
     var method: HTTPMethod {
