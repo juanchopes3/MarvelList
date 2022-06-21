@@ -183,6 +183,14 @@
 			path = ApiManager;
 			sourceTree = "<group>";
 		};
+		240DAF8B28617799007A93CB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				241CB5C62860F56C00D306E3 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		241CB5732860F0BF00D306E3 = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +217,8 @@
 		241CB57E2860F0BF00D306E3 /* MarvelList */ = {
 			isa = PBXGroup;
 			children = (
-				241CB5C62860F56C00D306E3 /* Main */,
+				240DAF8B28617799007A93CB /* Modules */,
+				240DAF7A28614821007A93CB /* ApiManager */,
 				241CB5B42860F2CA00D306E3 /* Extensions */,
 				241CB5B12860F28F00D306E3 /* Utils */,
 				241CB57F2860F0BF00D306E3 /* AppDelegate.swift */,
@@ -295,7 +304,6 @@
 		241CB5CE2860F56C00D306E3 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				240DAF7A28614821007A93CB /* ApiManager */,
 				241CB5CF2860F56C00D306E3 /* MainModuleInteractor.swift */,
 			);
 			path = Interactor;
