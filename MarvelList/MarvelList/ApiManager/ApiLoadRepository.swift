@@ -12,14 +12,21 @@ import Alamofire
 
 protocol ApiLoadRepositoryProtocol {
     func getListData() -> Promise<[MainModuleModel]>
+    func getlistSearch(value: String) -> Promise<[MainModuleModel]>
 }
 
 
 public class ApiLoadRepository: ApiLoadRepositoryProtocol {
     
     private var apiflowManager = ApiData(ApiflowManager())
+    
     func getListData() -> Promise<[MainModuleModel]> {
         let router =  apiflowManager.apiData(route: .getData)
+        return request(router)
+    }
+    
+    func getlistSearch(value: String) -> Promise<[MainModuleModel]> {
+        let router = apiflowManager.apiData(route: .getSearch(value))
         return request(router)
     }
 }

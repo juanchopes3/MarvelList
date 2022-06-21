@@ -23,5 +23,11 @@ class MainModulePresenter: MainModulePresenterProtocol {
     func goToDetailView(id: Int) {
         router?.pushDetailView(id: id)
     }
+    
+    func getListSearch(value: String) {
+        interactor?.requestDataBySearch(value: value, completion: { dto in
+            self.view?.setItems(data: dto)
+        })
+    }
 
 }

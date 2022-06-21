@@ -25,4 +25,19 @@ class MainModuleInteractor: MainModuleInteractorProtocol {
             }
         }
     }
+    
+    func requestDataBySearch(value: String, completion: @escaping ([MainModuleModel]) -> Void) {
+        let api = ApiLoadRepository()
+        let apiDataLoader = ApiDataLoaderPromise(api: api)
+        
+        apiDataLoader.getSearch(value: value) { result in
+            switch result {
+            case .success(let dto):
+                completion(dto)
+            case .failure(_):
+                
+                break
+            }
+        }
+    }
 }

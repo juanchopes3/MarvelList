@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 public enum ApiRoute {
-    case getData, getDetail
+    case getData, getDetail(Int), getSearch(String)
 }
 
 
@@ -39,12 +39,18 @@ extension ApiRouteable {
     var parameters: Parameters? {
         
         let ts = String(Date().timeIntervalSince1970)
-        let urlParams = [
+        var urlParams = [
           "ts" : ts,
           "hash" : MD5(string: ts + String.getConfigurartionValue(forKey: .privateKey) + String.getConfigurartionValue(forKey: .publicKey)),
           "apikey" : String.getConfigurartionValue(forKey: .publicKey),
           "limit" : "50"
         ]
+        
+        switch route {
+        case .getSearch(let value):
+            urlParams.updateValue(value, forKey: "nameStartsWith")
+        default: break
+        }
         return urlParams
     }
     

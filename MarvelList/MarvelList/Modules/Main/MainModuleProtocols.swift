@@ -16,6 +16,7 @@ protocol MainModuleRouterProtocol: AnyObject {
 protocol MainModulePresenterProtocol: AnyObject {
 
     func getListData()
+    func getListSearch(value: String)
     func goToDetailView(id: Int)
 }
 
@@ -23,6 +24,7 @@ protocol MainModulePresenterProtocol: AnyObject {
 protocol MainModuleInteractorProtocol: AnyObject {
     
     func requestData(completion: @escaping ([MainModuleModel]) -> Void)
+    func requestDataBySearch(value: String, completion: @escaping ([MainModuleModel]) -> Void)
 }
 
 

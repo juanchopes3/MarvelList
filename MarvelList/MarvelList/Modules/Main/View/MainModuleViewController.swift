@@ -26,7 +26,8 @@ class MainModuleViewController: UIViewController {
     private func customizeUI() {
         itemsCollection.register(UINib(nibName: "MainCollectionViewCell", bundle: .main),
                                 forCellWithReuseIdentifier: "MainCollectionViewCell")
-        
+        searchBar.delegate = self
+        searchBar.showsCancelButton = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -80,6 +81,25 @@ extension MainModuleViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: (self.view.frame.size.width)/2 - 35, height: 200)
     }
     
+}
+
+extension MainModuleViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        if text == "\n"{ return false}
+        let textactual = searchBar.text! + text
+        if textactual.count > 2 {
+            presenterModule?.getListSearch(value: textactual)
+            
+        }
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        SVProgressHUD.show()
+        presenterModule?.getListData()
+    }
     
 }
 
