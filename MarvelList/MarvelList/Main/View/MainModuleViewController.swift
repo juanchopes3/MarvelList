@@ -17,6 +17,7 @@ class MainModuleViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         customizeUI()
+        presenterModule?.getListData()
         
     }
     

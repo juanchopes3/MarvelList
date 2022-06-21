@@ -14,14 +14,17 @@ protocol MainModuleRouterProtocol: AnyObject {
 
 protocol MainModulePresenterProtocol: AnyObject {
 
+    func getListData()
 }
 
 
 protocol MainModuleInteractorProtocol: AnyObject {
-
+    
+    func requestData(completion: @escaping ([MainModuleModel]) -> Void)
 }
 
 
 protocol MainModuleViewProtocol: AnyObject {
 
+    
 }

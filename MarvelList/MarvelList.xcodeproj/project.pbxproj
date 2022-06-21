@@ -16,6 +16,14 @@
 		240DAF7528614344007A93CB /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF7428614344007A93CB /* Stories.swift */; };
 		240DAF7728614369007A93CB /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF7628614369007A93CB /* Events.swift */; };
 		240DAF7928614457007A93CB /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF7828614457007A93CB /* Series.swift */; };
+		240DAF7C2861492F007A93CB /* ApiDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF7B2861492F007A93CB /* ApiDataLoader.swift */; };
+		240DAF7E28614940007A93CB /* ApiLoadMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF7D28614940007A93CB /* ApiLoadMapper.swift */; };
+		240DAF802861494E007A93CB /* ApiLoadRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF7F2861494E007A93CB /* ApiLoadRepository.swift */; };
+		240DAF822861495D007A93CB /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF812861495D007A93CB /* ApiManager.swift */; };
+		240DAF842861496F007A93CB /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF832861496F007A93CB /* ApiRouter.swift */; };
+		240DAF8628614A13007A93CB /* Routeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF8528614A13007A93CB /* Routeable.swift */; };
+		240DAF8828614A2D007A93CB /* Mappeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF8728614A2D007A93CB /* Mappeable.swift */; };
+		240DAF8A28614AD9007A93CB /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF8928614AD9007A93CB /* MD5.swift */; };
 		241CB5802860F0BF00D306E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB57F2860F0BF00D306E3 /* AppDelegate.swift */; };
 		241CB5822860F0BF00D306E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5812860F0BF00D306E3 /* SceneDelegate.swift */; };
 		241CB5842860F0BF00D306E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5832860F0BF00D306E3 /* ViewController.swift */; };
@@ -71,6 +79,14 @@
 		240DAF7428614344007A93CB /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		240DAF7628614369007A93CB /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		240DAF7828614457007A93CB /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		240DAF7B2861492F007A93CB /* ApiDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataLoader.swift; sourceTree = "<group>"; };
+		240DAF7D28614940007A93CB /* ApiLoadMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLoadMapper.swift; sourceTree = "<group>"; };
+		240DAF7F2861494E007A93CB /* ApiLoadRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLoadRepository.swift; sourceTree = "<group>"; };
+		240DAF812861495D007A93CB /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		240DAF832861496F007A93CB /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		240DAF8528614A13007A93CB /* Routeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routeable.swift; sourceTree = "<group>"; };
+		240DAF8728614A2D007A93CB /* Mappeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappeable.swift; sourceTree = "<group>"; };
+		240DAF8928614AD9007A93CB /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		241CB57C2860F0BF00D306E3 /* MarvelList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		241CB57F2860F0BF00D306E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		241CB5812860F0BF00D306E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +171,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		240DAF7A28614821007A93CB /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				240DAF7B2861492F007A93CB /* ApiDataLoader.swift */,
+				240DAF7D28614940007A93CB /* ApiLoadMapper.swift */,
+				240DAF7F2861494E007A93CB /* ApiLoadRepository.swift */,
+				240DAF812861495D007A93CB /* ApiManager.swift */,
+				240DAF832861496F007A93CB /* ApiRouter.swift */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
 		241CB5732860F0BF00D306E3 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +244,9 @@
 			isa = PBXGroup;
 			children = (
 				241CB5B22860F2A400D306E3 /* CustomView.swift */,
+				240DAF8528614A13007A93CB /* Routeable.swift */,
+				240DAF8728614A2D007A93CB /* Mappeable.swift */,
+				240DAF8928614AD9007A93CB /* MD5.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -264,6 +295,7 @@
 		241CB5CE2860F56C00D306E3 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				240DAF7A28614821007A93CB /* ApiManager */,
 				241CB5CF2860F56C00D306E3 /* MainModuleInteractor.swift */,
 			);
 			path = Interactor;
@@ -546,22 +578,30 @@
 			files = (
 				241CB5DE28612B1700D306E3 /* GradientView.swift in Sources */,
 				241CB5842860F0BF00D306E3 /* ViewController.swift in Sources */,
+				240DAF8A28614AD9007A93CB /* MD5.swift in Sources */,
 				241CB5DB2860F56C00D306E3 /* MainModuleRouter.swift in Sources */,
 				241CB5D82860F56C00D306E3 /* MainModuleProtocols.swift in Sources */,
 				240DAF7728614369007A93CB /* Events.swift in Sources */,
 				240DAF732861431E007A93CB /* Items.swift in Sources */,
 				240DAF7928614457007A93CB /* Series.swift in Sources */,
+				240DAF842861496F007A93CB /* ApiRouter.swift in Sources */,
 				240DAF7528614344007A93CB /* Stories.swift in Sources */,
 				240DAF6D2861424F007A93CB /* Url.swift in Sources */,
 				241CB5D42860F56C00D306E3 /* MainModulePresenter.swift in Sources */,
 				241CB5D92860F56C00D306E3 /* MainModuleInteractor.swift in Sources */,
 				240DAF7128614305007A93CB /* Comics.swift in Sources */,
+				240DAF8828614A2D007A93CB /* Mappeable.swift in Sources */,
+				240DAF822861495D007A93CB /* ApiManager.swift in Sources */,
 				241CB5D52860F56C00D306E3 /* MainModuleModule.swift in Sources */,
+				240DAF7C2861492F007A93CB /* ApiDataLoader.swift in Sources */,
 				240DAF6A28613265007A93CB /* MainCollectionViewCell.swift in Sources */,
 				241CB5D72860F56C00D306E3 /* MainModuleViewController.swift in Sources */,
+				240DAF7E28614940007A93CB /* ApiLoadMapper.swift in Sources */,
 				241CB5B32860F2A400D306E3 /* CustomView.swift in Sources */,
 				241CB5802860F0BF00D306E3 /* AppDelegate.swift in Sources */,
 				241CB5822860F0BF00D306E3 /* SceneDelegate.swift in Sources */,
+				240DAF802861494E007A93CB /* ApiLoadRepository.swift in Sources */,
+				240DAF8628614A13007A93CB /* Routeable.swift in Sources */,
 				241CB5B62860F2E400D306E3 /* UIViewController.swift in Sources */,
 				240DAF6F28614298007A93CB /* Thumbnail.swift in Sources */,
 				241CB5DA2860F56C00D306E3 /* MainModuleEntity.swift in Sources */,

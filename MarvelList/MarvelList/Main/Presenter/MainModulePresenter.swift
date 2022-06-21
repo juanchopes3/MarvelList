@@ -13,5 +13,11 @@ class MainModulePresenter: MainModulePresenterProtocol {
     var interactor: MainModuleInteractorProtocol?
     var router: MainModuleRouterProtocol?
     
+    
+    func getListData() {
+        interactor?.requestData(completion: { dto in
+            print(dto)
+        })
+    }
 
 }
