@@ -22,5 +22,10 @@ struct Thumbnail : Codable {
         path = try? values.decodeIfPresent(String.self, forKey: .path)
         exten = try? values.decodeIfPresent(String.self, forKey: .exten)
     }
+    
+    var url: String {
+        guard let base = path, let ext = exten else { return "" }
+        return base + "." + ext
+    }
 
 }

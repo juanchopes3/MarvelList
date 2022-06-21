@@ -16,8 +16,12 @@ class MainModulePresenter: MainModulePresenterProtocol {
     
     func getListData() {
         interactor?.requestData(completion: { dto in
-            print(dto)
+            self.view?.setItems(data: dto)
         })
+    }
+    
+    func goToDetailView(id: Int) {
+        router?.pushDetailView(id: id)
     }
 
 }

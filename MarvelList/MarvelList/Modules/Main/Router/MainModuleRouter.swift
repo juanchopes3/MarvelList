@@ -9,5 +9,9 @@ import UIKit
 class MainModuleRouter: MainModuleRouterProtocol {
     
     weak var viewController: UIViewController?
+    
+    func pushDetailView(id: Int) {
+        
+    }
 
 }

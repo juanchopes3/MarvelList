@@ -9,12 +9,14 @@ import Foundation
 
 
 protocol MainModuleRouterProtocol: AnyObject {
+    func pushDetailView(id: Int)
 
 }
 
 protocol MainModulePresenterProtocol: AnyObject {
 
     func getListData()
+    func goToDetailView(id: Int)
 }
 
 
@@ -25,6 +27,7 @@ protocol MainModuleInteractorProtocol: AnyObject {
 
 
 protocol MainModuleViewProtocol: AnyObject {
-
+    
+    func setItems(data: [MainModuleModel])
     
 }
