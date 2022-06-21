@@ -15,3 +15,12 @@ struct ApiLoadMapper: MappeableType {
         return decode(data) as? T
     }
 }
+
+struct ApiDetailMapper: MappeableType {
+    
+    typealias Result = MainModuleModel
+    
+    func map<T>(_ data: Data) -> T? {
+        return decode(data) as? T
+    }
+}

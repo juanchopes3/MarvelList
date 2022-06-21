@@ -26,6 +26,14 @@
 		240DAF8A28614AD9007A93CB /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF8928614AD9007A93CB /* MD5.swift */; };
 		240DAF8F28620A23007A93CB /* ConstantsConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 240DAF8E28620A23007A93CB /* ConstantsConfiguration.plist */; };
 		240DAF9128620CED007A93CB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAF9028620CED007A93CB /* Configuration.swift */; };
+		240DAFAF2862252E007A93CB /* DetailModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAFA32862252D007A93CB /* DetailModulePresenter.swift */; };
+		240DAFB02862252E007A93CB /* DetailModuleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAFA42862252D007A93CB /* DetailModuleModule.swift */; };
+		240DAFB12862252E007A93CB /* DetailModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAFA62862252D007A93CB /* DetailModuleViewController.swift */; };
+		240DAFB22862252E007A93CB /* DetailModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240DAFA72862252D007A93CB /* DetailModuleViewController.xib */; };
+		240DAFB32862252E007A93CB /* DetailModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAFA92862252D007A93CB /* DetailModuleInteractor.swift */; };
+		240DAFB42862252E007A93CB /* DetailModuleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAFAB2862252D007A93CB /* DetailModuleEntity.swift */; };
+		240DAFB52862252E007A93CB /* DetailModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAFAC2862252D007A93CB /* DetailModuleProtocols.swift */; };
+		240DAFB62862252E007A93CB /* DetailModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DAFAE2862252D007A93CB /* DetailModuleRouter.swift */; };
 		241CB5802860F0BF00D306E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB57F2860F0BF00D306E3 /* AppDelegate.swift */; };
 		241CB5822860F0BF00D306E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5812860F0BF00D306E3 /* SceneDelegate.swift */; };
 		241CB5842860F0BF00D306E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB5832860F0BF00D306E3 /* ViewController.swift */; };
@@ -91,6 +99,14 @@
 		240DAF8928614AD9007A93CB /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		240DAF8E28620A23007A93CB /* ConstantsConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ConstantsConfiguration.plist; sourceTree = "<group>"; };
 		240DAF9028620CED007A93CB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		240DAFA32862252D007A93CB /* DetailModulePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModulePresenter.swift; sourceTree = "<group>"; };
+		240DAFA42862252D007A93CB /* DetailModuleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleModule.swift; sourceTree = "<group>"; };
+		240DAFA62862252D007A93CB /* DetailModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleViewController.swift; sourceTree = "<group>"; };
+		240DAFA72862252D007A93CB /* DetailModuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailModuleViewController.xib; sourceTree = "<group>"; };
+		240DAFA92862252D007A93CB /* DetailModuleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleInteractor.swift; sourceTree = "<group>"; };
+		240DAFAB2862252D007A93CB /* DetailModuleEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleEntity.swift; sourceTree = "<group>"; };
+		240DAFAC2862252D007A93CB /* DetailModuleProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleProtocols.swift; sourceTree = "<group>"; };
+		240DAFAE2862252D007A93CB /* DetailModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleRouter.swift; sourceTree = "<group>"; };
 		241CB57C2860F0BF00D306E3 /* MarvelList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		241CB57F2860F0BF00D306E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		241CB5812860F0BF00D306E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,9 +206,65 @@
 		240DAF8B28617799007A93CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				240DAFA12862252D007A93CB /* Detail */,
 				241CB5C62860F56C00D306E3 /* Main */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		240DAFA12862252D007A93CB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				240DAFA22862252D007A93CB /* Presenter */,
+				240DAFA42862252D007A93CB /* DetailModuleModule.swift */,
+				240DAFA52862252D007A93CB /* View */,
+				240DAFA82862252D007A93CB /* Interactor */,
+				240DAFAA2862252D007A93CB /* Entities */,
+				240DAFAC2862252D007A93CB /* DetailModuleProtocols.swift */,
+				240DAFAD2862252D007A93CB /* Router */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		240DAFA22862252D007A93CB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				240DAFA32862252D007A93CB /* DetailModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		240DAFA52862252D007A93CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				240DAFA62862252D007A93CB /* DetailModuleViewController.swift */,
+				240DAFA72862252D007A93CB /* DetailModuleViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		240DAFA82862252D007A93CB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				240DAFA92862252D007A93CB /* DetailModuleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		240DAFAA2862252D007A93CB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				240DAFAB2862252D007A93CB /* DetailModuleEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		240DAFAD2862252D007A93CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				240DAFAE2862252D007A93CB /* DetailModuleRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		241CB5732860F0BF00D306E3 = {
@@ -464,6 +536,7 @@
 				241CB5B02860F1B700D306E3 /* README.md in Resources */,
 				241CB5872860F0BF00D306E3 /* Main.storyboard in Resources */,
 				241CB5D62860F56C00D306E3 /* MainModuleViewController.xib in Resources */,
+				240DAFB22862252E007A93CB /* DetailModuleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,23 +664,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240DAFB62862252E007A93CB /* DetailModuleRouter.swift in Sources */,
 				241CB5DE28612B1700D306E3 /* GradientView.swift in Sources */,
 				241CB5842860F0BF00D306E3 /* ViewController.swift in Sources */,
 				240DAF8A28614AD9007A93CB /* MD5.swift in Sources */,
+				240DAFAF2862252E007A93CB /* DetailModulePresenter.swift in Sources */,
 				241CB5DB2860F56C00D306E3 /* MainModuleRouter.swift in Sources */,
 				241CB5D82860F56C00D306E3 /* MainModuleProtocols.swift in Sources */,
+				240DAFB12862252E007A93CB /* DetailModuleViewController.swift in Sources */,
 				240DAF7728614369007A93CB /* Events.swift in Sources */,
+				240DAFB52862252E007A93CB /* DetailModuleProtocols.swift in Sources */,
 				240DAF9128620CED007A93CB /* Configuration.swift in Sources */,
 				240DAF732861431E007A93CB /* Items.swift in Sources */,
 				240DAF7928614457007A93CB /* Series.swift in Sources */,
 				240DAF842861496F007A93CB /* ApiRouter.swift in Sources */,
 				240DAF7528614344007A93CB /* Stories.swift in Sources */,
+				240DAFB32862252E007A93CB /* DetailModuleInteractor.swift in Sources */,
 				240DAF6D2861424F007A93CB /* Url.swift in Sources */,
 				241CB5D42860F56C00D306E3 /* MainModulePresenter.swift in Sources */,
 				241CB5D92860F56C00D306E3 /* MainModuleInteractor.swift in Sources */,
 				240DAF7128614305007A93CB /* Comics.swift in Sources */,
 				240DAF8828614A2D007A93CB /* Mappeable.swift in Sources */,
 				240DAF822861495D007A93CB /* ApiManager.swift in Sources */,
+				240DAFB02862252E007A93CB /* DetailModuleModule.swift in Sources */,
 				241CB5D52860F56C00D306E3 /* MainModuleModule.swift in Sources */,
 				240DAF7C2861492F007A93CB /* ApiDataLoader.swift in Sources */,
 				240DAF6A28613265007A93CB /* MainCollectionViewCell.swift in Sources */,
@@ -621,6 +700,7 @@
 				241CB5B62860F2E400D306E3 /* UIViewController.swift in Sources */,
 				240DAF6F28614298007A93CB /* Thumbnail.swift in Sources */,
 				241CB5DA2860F56C00D306E3 /* MainModuleEntity.swift in Sources */,
+				240DAFB42862252E007A93CB /* DetailModuleEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
